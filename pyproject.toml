@@ -1,0 +1,20 @@
+[project]
+name = "flask-scan"
+version = "0.1.0"
+description = "Static inventory of Flask routes with Flask-to-FastAPI migration hints"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+flask-scan = "flask_scan.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
